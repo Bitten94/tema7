@@ -10,6 +10,14 @@
             font-family: monospace;
             color: darkblue;
             line-height: 150%;
+            font-size: 1.5rem;
+        }
+
+        .typo2 {
+            font-family: monospace;
+            color: darkblue;
+            line-height: 150%;
+            font-size: 3rem;
         }
     </style>
 
@@ -36,6 +44,16 @@
             alleP.forEach(p => {
                 p.addEventListener("click", () => {
                     p.classList.add("typo");
+                })
+            })
+        }
+        forstør();
+
+        function forstør() {
+            let alleh3 = document.querySelectorAll("h3");
+            alleh3.forEach(h3 => {
+                h3.addEventListener("click", () => {
+                    h3.classList.add("typo2");
                 })
             })
         }
