@@ -20,11 +20,22 @@
         function button_clicked() {
             let længde = document.querySelector("#længde").value;
             let bredde = document.querySelector("#bredde").value;
-            let areal = længde * bredde;
+            //let areal = længde * bredde;
 
-            let resultat = `Arealet er ${areal} kvadratmeter.`;
+            let resultat = `Arealet er ${areal(længde, bredde)} kvadratmeter`;
+
+            //HVIS arealet ikke er et gyldigt tal, dvs. at det er 0 og derunder, skal  brugeren have at vide at det ikke er en gyldig indtastning.
+            if (areal <= 0) {
+                resultat = "det ikke er en gyldig indtastning";
+                console.log(resultat);
+            }
+
 
             console.log(resultat);
+        }
+
+        function areal(l, b) {
+            return (l * b);
         }
     </script>
 </body></html>
